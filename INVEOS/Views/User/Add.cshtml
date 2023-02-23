@@ -1,0 +1,115 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+     <div class="content-page">
+     <div class="container-fluid add-form-list">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title">Add Users</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form action="page-list-users.html" data-toggle="validator">
+                            @using (Html.BeginForm("Add", "User", FormMethod.Post)){
+                                <div class="row"> 
+                                    <div class="col-md-6">                      
+                                        <div class="form-group">
+                                            <label>Nombre *</label>
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Nombre Completo" required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">                      
+                                        <div class="form-group">
+                                            <label>Apellido *</label>
+                                            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Ingrese Apellido" required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Teléfono *</label>
+                                            <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Ingrese Número de Teléfono" required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Correo *</label>
+                                            <input type="text" class="form-control" name="email" id="email" placeholder="Ingrese Correo" required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Género</label>
+                                            <select name="type" id="gender" class="selectpicker form-control" data-style="py-0">
+                                                <option>Masculino</option>
+                                                <option>Femenino</option>
+                                            </select>
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">                      
+                                        <div class="form-group">
+                                            <label>Usuario *</label>
+                                            <input type="text" class="form-control" name="username" id="username" placeholder="Ingrese Nombre de Usuario" required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">                      
+                                        <div class="form-group">
+                                            <label>Contraseña</label>
+                                            <input type="text" class="form-control" name="password" id="password" placeholder="Ingrese Contraseña" required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>  
+                                    <div class="col-md-6">                      
+                                        <div class="form-group">
+                                            <label>Confirmar Contraseña</label>
+                                            <input type="text" class="form-control" name="passConfirm" id="passConfirm" placeholder="Ingrese Confirmación de Contraseña" required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Estado *</label>
+                                            <select name="type" id="status" class="selectpicker form-control" data-style="py-0">
+                                                <option>Activo</option>
+                                                <option>Inactivo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Rol *</label>
+                                            <select name="type" id="userType" class="selectpicker form-control" data-style="py-0">
+                                                <option>Vendedor</option>
+                                                <option>Administrador</option>
+                                                <option>Análista</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    @*<div class="col-md-12">
+                                       <div class="checkbox d-inline-block mb-3">
+                                            <input type="checkbox" class="checkbox-input mr-2" id="checkbox1" checked="">
+                                            <label for="checkbox1">Notify User by Email</label>
+                                        </div>
+                                    </div>*@                               
+                                </div>                            
+                                <input type="submit" class="btn btn-primary mr-2" value="Agregar"/>
+                                <button type="reset" class="btn btn-danger">Restablecer</button>
+                            }
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page end  -->
+    </div>
+      </div>
+
